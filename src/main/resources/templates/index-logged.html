@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <title>JAVAcademy</title>
+</head>
+<body style="background-color: snow">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top border-bottom border-danger" >
+        <div class="container-fluid">
+
+            <a style="color: red" class="navbar-brand" href="/index-logged">
+                <img src="https://i.postimg.cc/XY0pgrcT/output-onlinepngtools.png" height="60px" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-5" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-3">
+                    <li class="nav-item">
+                        <a style="color: red; text-underline: red" class="nav-link  active h5 ms-3 mt-2" aria-current="page" href="/learn-logged"><i class="bi bi-book"></i> LEARN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: red" class="nav-link  h5 ms-3 mt-2" href="/sources-logged"><i class="bi bi-boxes"></i> SOURCES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: red" class="nav-link  h5 ms-3 mt-2" href="/quiz-logged"><i class="bi bi-award"></i> QUIZ</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item  ms-3 mt-1">
+                        <p class="mt-1" ><span style="color: red; font-size: larger"><i class="bi bi-person-fill"> Elon Musk </i></span></p>
+
+                    </li>
+                    <li class="nav-item justify-content-end ms-3 mt-1">
+                        <a class="btn btn-outline-danger" href="/" role="button"><i class="bi bi-box-arrow-in-left"></i> Logout &raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
+<br><br><br><br><br>
+<div class="container">
+    <div id="carouselExampleCaptions" class="carousel slide mt-2    " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.educative.io/v2api/editorpage/6402891239653376/image/5261134581989376" height="650px" width="1600px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3></h3>
+                    <a class="btn btn-lg btn-danger btn-block" href="/learn" role="button"> Start Learning Java Now! &raquo;</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.fita.in/wp-content/uploads/2020/10/oops-concepts-in-java.jpg" height="650px" width="1600px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3></h3>
+                    <a class="btn btn-lg btn-danger btn-block" href="/learn/oop" role="button"> Start Learning &raquo;</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://miro.medium.com/max/1400/1*5h3Fv82Gsilyhh2URcIVZA.png" height="650px" width="1600px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Java Basics</h3>
+                    <a class="btn btn-lg btn-danger btn-block" href="/learn/java-basics" role="button"> Start Learning &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<br><br>
+<section class="border-top border-danger">
+    <!-- Footer -->
+    <footer style="background-color: snow" class=" text-danger  text-center">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-md-0">
+                    <p>
+                        JAVAcademy is a platform that is used to learn Java programming language. We offer best
+                        materials and exercises that can be used to learn Java. We also offer certification of our users
+                        who have completed the learning process and had enough points from test.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-md-0">
+                    <img class="ms-5" src="https://i.postimg.cc/XY0pgrcT/output-onlinepngtools.png" width="300px">
+                </div>
+                <div class="text-center p-3" style="background-color: snow">
+                    © 2022 Copyright:
+                    <a class="text-danger" href="/">JAVAcademy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+</body>
+
+</html>

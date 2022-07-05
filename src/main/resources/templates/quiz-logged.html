@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.springframework.org/schema/data/jaxb"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JAVAcademy - Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top border-bottom border-danger" >
+        <div class="container-fluid">
+
+            <a style="color: red" class="navbar-brand" href="/index-logged">
+                <img src="https://i.postimg.cc/XY0pgrcT/output-onlinepngtools.png" height="60px" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-5" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-3">
+                    <li class="nav-item">
+                        <a style="color: red; text-underline: red" class="nav-link  active h5 ms-3 mt-2" aria-current="page" href="/learn-logged"><i class="bi bi-book"></i> LEARN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: red" class="nav-link  h5 ms-3 mt-2" href="/sources-logged"><i class="bi bi-boxes"></i> SOURCES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: red" class="nav-link  h5 ms-3 mt-2" href="/quiz-logged"><i class="bi bi-award"></i> QUIZ</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item  ms-3 mt-1">
+                        <p class="mt-1" ><span style="color: red; font-size: larger" ><i class="bi bi-person-fill"> Elon Musk</i></span></p>
+
+                    </li>
+                    <li class="nav-item justify-content-end ms-3 mt-1">
+                        <a class="btn btn-outline-danger" href="/" role="button"><i class="bi bi-box-arrow-in-left"></i> Logout &raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
+
+<br> <br><br><br><br><br><br><br>
+
+<div layout:fragment="content" class="container">
+    <div class="simple-login-container col-md-4 offset-md-4">
+        <h5 style="color: red">Knowledge is power, especially in the current job market. Documentation of your skills enables you to advance your career, or help you to start a new one.
+            Take the quiz now and get your certificate!</h5>
+        <br>
+        <br>
+        <p style="color: red"># of questions: 5</p>
+        <p style="color: red">Time limit: 5 minutes</p>
+        <p style="color: red">Total points: 50</p>
+        <p style="color: red">Pass limit: 25pts</p>
+        <a href="/quiz-questions" class="btn btn-lg btn-danger btn-block mb-1">
+            START QUIZ NOW! >>
+        </a>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section class="border-top border-danger">
+    <!-- Footer -->
+    <footer style="background-color: snow" class=" text-danger  text-center">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-md-0">
+                    <p>
+                        JAVAcademy is a platform that is used to learn Java programming language. We offer best
+                        materials and exercises that can be used to learn Java. We also offer certification of our users
+                        who have completed the learning process and had enough points from test.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-md-0">
+                    <img class="ms-5" src="https://i.postimg.cc/XY0pgrcT/output-onlinepngtools.png" width="300px">
+                </div>
+                <div class="text-center p-3" style="background-color: snow">
+                    © 2022 Copyright:
+                    <a class="text-danger" href="/">JAVAcademy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+</body>
+</html>
